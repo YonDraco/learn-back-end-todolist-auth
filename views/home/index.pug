@@ -1,0 +1,25 @@
+include ../layout/header
+.container
+    h1=title
+    if(username && auth)
+        p=`Welcome ${username}!`
+    ul.todos
+        li.row
+            .title Title
+            .title Status
+            if(auth)
+                .title Action
+        each todo in todos
+            li.row
+                .cell=todo.title
+                .cell=todo.status
+                if(auth)
+                    .cell
+                        a(href=`/delete/${todo._id}`) Delete
+    .pager
+        if(pr)
+            a(href=`/?p=${pr}&nitem=${n}`) Previous 
+        a=` | ${p} | `
+        if(nxt) 
+            a(href=`/?p=${nxt}&nitem=${n}`) Next
+include ../layout/footer

@@ -1,0 +1,14 @@
+include ../layout/header
+.container
+    h2 CREATE TODO
+    if(auth)
+        form(action="/create" method="POST")
+            input(name="title" type="text" placeholder="Title")
+            select(name="status")
+                option(value="New") New
+                option(value="Progress") Progress
+                option(value="Done") Done
+            input(type="submit" value="CREATE")
+    else
+        h2 Ban khong co quyen tao TODO
+include ../layout/footer

@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+}
+h1 {
+    color: blue;
+}
+
+.menu {
+    background: #ececec;
+    margin: 0;
+}
+.menu-item {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+}
+.menu-item:hover {
+    background: #3e3e3e;
+}
+.menu-item a {
+    color: darkslateblue;
+    text-decoration: none;
+}
+.menu-item:hover a {
+    color: yellow;
+}
+.container {
+    text-align: center;
+}
+.todos {
+    display: inline-block;
+    border: 1px solid yellowgreen;
+    padding: 0;
+}
+.row {
+    list-style: none;
+    border-bottom: 1px solid yellowgreen;
+}
+.title, .cell {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid yellowgreen;
+}
+.title {
+    background: gray;
+    color: yellow;
+}
+
+.footer {
+    margin-top:5px;
+    background: #eeee;
+    text-align: center;
+    padding: 5px;
+    font-size:1.3em;
+    color: #818181;
+    font-weight: 700;
+}
