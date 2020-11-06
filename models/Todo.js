@@ -5,6 +5,10 @@ const todoSchema = mongoose.Schema({
     status: String,
 });
 
+todoSchema.statics.getTodos = function(){
+    return this.find().lean();
+}
+
 todoSchema.statics.getAll = function(p, n) {
     return this.find().skip((p-1)*n).limit(n).lean();
 }

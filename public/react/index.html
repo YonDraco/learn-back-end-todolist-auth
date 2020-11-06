@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>React Fetch</title>
+</head>
+
+<body>
+    <div id="root">Loading</div>
+    <script>
+        const rootEl = document.getElementById('root');
+        fetch('/api/todos').then(
+            (data) => {
+                data.json().then(todos => {
+                    todos.forEach(todo => {
+                        let p = document.createElement('p');
+                        p.textContent = todo.title;
+                        rootEl.appendChild(p);
+
+                    })
+                });
+            })
+    </script>
+</body>
+
+</html>
